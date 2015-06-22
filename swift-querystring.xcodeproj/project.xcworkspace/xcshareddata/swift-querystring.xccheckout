@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>76140800-00D0-4D9C-961A-2F59398E8D29</string>
+	<key>IDESourceControlProjectName</key>
+	<string>swift-querystring</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>059FCF2E3945600E70E5EA07DE68F05430EF2453</key>
+		<string>github.com:zemirco/swift-querystring.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>swift-querystring.xcodeproj</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>059FCF2E3945600E70E5EA07DE68F05430EF2453</key>
+		<string>../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>github.com:zemirco/swift-querystring.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>111</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>059FCF2E3945600E70E5EA07DE68F05430EF2453</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>059FCF2E3945600E70E5EA07DE68F05430EF2453</string>
+			<key>IDESourceControlWCCName</key>
+			<string>swift-querystring</string>
+		</dict>
+	</array>
+</dict>
+</plist>

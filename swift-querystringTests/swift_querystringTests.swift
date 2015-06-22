@@ -13,7 +13,29 @@ public class TestString: QueryString {
     }
 }
 
+public class TestInt: QueryString {
+    public var count: Int = 5
+    
+    public override init() {
+        super.init()
+    }
+}
 
+public class TestArray: QueryString {
+    public var animals = ["dog", "horse", "bear"]
+    
+    public override init() {
+        super.init()
+    }
+}
+
+public class TestBool: QueryString {
+    public var works = true
+    
+    public override init() {
+        super.init()
+    }
+}
 
 class swift_querystringTests: XCTestCase {
     
@@ -32,16 +54,19 @@ class swift_querystringTests: XCTestCase {
         XCTAssertEqual(test.encode(), "beep=\"bopp\"")
     }
     
-//    func testExample() {
-//        // This is an example of a functional test case.
-//        XCTAssert(true, "Pass")
-//    }
-//    
-//    func testPerformanceExample() {
-//        // This is an example of a performance test case.
-//        self.measureBlock() {
-//            // Put the code you want to measure the time of here.
-//        }
-//    }
+    func testInt() {
+        var test = TestInt()
+        XCTAssertEqual(test.encode(), "count=5")
+    }
+    
+    func testArray() {
+        var test = TestArray()
+        XCTAssertEqual(test.encode(), "animals=[\"dog\",\"horse\",\"bear\"]")
+    }
+    
+    func testBool() {
+        var test = TestBool()
+        XCTAssertEqual(test.encode(), "works=true")
+    }
     
 }
