@@ -28,7 +28,7 @@ public class QueryString {
             let (name, child) = mirror[i]
             
             if child.valueType is String.Type {
-                params.append("\(name)=\"\(child.value)\"")
+                params.append(handleString(name, value: child.value))
             }
             
             else if child.valueType is Bool.Type {
@@ -36,7 +36,7 @@ public class QueryString {
             }
             
             else if child.valueType is Int.Type {
-                params.append("\(name)=\(child.value)")
+                params.append(handleInt(name, value: child.value))
             }
             
             else if child.valueType is [String].Type {
@@ -49,27 +49,39 @@ public class QueryString {
             
             else {
                 // handle optionals
-                
                 switch child.disposition {
                 case .Optional:
-                    var test = reflect(child.value)
-                    if test.count > 0 && test[0].0 == "Some" {
-                        println(name)
-                        println(test[0].1.value)
-                        println(test[0].1.valueType is String.Type)
+                    var sub = reflect(child.value)
+                    
+                    if sub.count > 0 && sub[0].0 == "Some" {
+                        
+                        if sub[0].1.valueType is String.Type {
+                            params.append(handleString(name, value: sub[0].1.value))
+                        }
+                        
+                        else if sub[0].1.valueType is Int.Type {
+                            params.append(handleInt(name, value: sub[0].1.value))
+                        }
+                        
                     }
                 default:
                     break
                 }
-//                
-//                if child.summary != "nil" {
-//                    params.append("\(name)=\"\(child.summary)\"")
-//                }
+                
             }
         }
         
         return "&".join(params)
         
+    }
+    
+    // handle String
+    private func handleString(key: String, value: Any) -> String {
+        return "\(key)=\"\(value)\""
+    }
+    
+    private func handleInt(key: String, value: Any) -> String {
+        return "\(key)=\(value)"
     }
     
 }

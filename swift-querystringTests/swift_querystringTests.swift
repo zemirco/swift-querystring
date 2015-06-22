@@ -39,7 +39,8 @@ public class TestBool: QueryString {
 
 public class TestOptional: QueryString {
     public var one: String?
-    public var two: String?
+    public var count: Int?
+    public var nothing: String?
     
     public override init() {
         super.init()
@@ -81,7 +82,8 @@ class swift_querystringTests: XCTestCase {
     func testOptional() {
         var test = TestOptional()
         test.one = "one"
-        XCTAssertEqual(test.encode(), "one=\"one\"")
+        test.count = 10
+        XCTAssertEqual(test.encode(), "one=\"one\"&count=10")
     }
     
 }
