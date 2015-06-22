@@ -37,6 +37,15 @@ public class TestBool: QueryString {
     }
 }
 
+public class TestOptional: QueryString {
+    public var one: String?
+    public var two: String?
+    
+    public override init() {
+        super.init()
+    }
+}
+
 class swift_querystringTests: XCTestCase {
     
     override func setUp() {
@@ -67,6 +76,12 @@ class swift_querystringTests: XCTestCase {
     func testBool() {
         var test = TestBool()
         XCTAssertEqual(test.encode(), "works=true")
+    }
+    
+    func testOptional() {
+        var test = TestOptional()
+        test.one = "one"
+        XCTAssertEqual(test.encode(), "one=\"one\"")
     }
     
 }

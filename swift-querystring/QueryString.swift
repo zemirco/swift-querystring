@@ -46,6 +46,26 @@ public class QueryString {
                     params.append("\(name)=[\(values)]")
                 }
             }
+            
+            else {
+                // handle optionals
+                
+                switch child.disposition {
+                case .Optional:
+                    var test = reflect(child.value)
+                    if test.count > 0 && test[0].0 == "Some" {
+                        println(name)
+                        println(test[0].1.value)
+                        println(test[0].1.valueType is String.Type)
+                    }
+                default:
+                    break
+                }
+//                
+//                if child.summary != "nil" {
+//                    params.append("\(name)=\"\(child.summary)\"")
+//                }
+            }
         }
         
         return "&".join(params)
