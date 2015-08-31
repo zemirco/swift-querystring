@@ -60,27 +60,27 @@ class swift_querystringTests: XCTestCase {
     }
     
     func testString() {
-        var test = TestString()
+        let test = TestString()
         XCTAssertEqual(test.encode(), "beep=\"bopp\"")
     }
     
     func testInt() {
-        var test = TestInt()
+        let test = TestInt()
         XCTAssertEqual(test.encode(), "count=5")
     }
     
     func testArray() {
-        var test = TestArray()
+        let test = TestArray()
         XCTAssertEqual(test.encode(), "animals=[\"dog\",\"horse\",\"bear\"]")
     }
     
     func testBool() {
-        var test = TestBool()
+        let test = TestBool()
         XCTAssertEqual(test.encode(), "works=true")
     }
     
     func testOptional() {
-        var test = TestOptional()
+        let test = TestOptional()
         test.one = "one"
         test.count = 10
         XCTAssertEqual(test.encode(), "one=\"one\"&count=10")
