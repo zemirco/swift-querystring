@@ -64,6 +64,10 @@ public class QueryString {
                             else if subValue.dynamicType is Int.Type {
                                 params.append(handleInt(label!, value: subValue))
                             }
+                            
+                            else if subValue.dynamicType is Bool.Type {
+                                params.append("\(label!)=\(subValue)")
+                            }
                         }
                         
                     }
