@@ -5,42 +5,42 @@ import swift_querystring
 
 
 
-public class TestString: QueryString {
-    public var beep = "bopp"
+open class TestString: QueryString {
+    open var beep = "bopp"
     
     public override init() {
         super.init()
     }
 }
 
-public class TestInt: QueryString {
-    public var count: Int = 5
+open class TestInt: QueryString {
+    open var count: Int = 5
     
     public override init() {
         super.init()
     }
 }
 
-public class TestArray: QueryString {
-    public var animals = ["dog", "horse", "bear"]
+open class TestArray: QueryString {
+    open var animals = ["dog", "horse", "bear"]
     
     public override init() {
         super.init()
     }
 }
 
-public class TestBool: QueryString {
-    public var works = true
+open class TestBool: QueryString {
+    open var works = true
     
     public override init() {
         super.init()
     }
 }
 
-public class TestOptional: QueryString {
-    public var one: String?
-    public var count: Int?
-    public var nothing: String?
+open class TestOptional: QueryString {
+    open var one: String?
+    open var count: Int?
+    open var nothing: String?
     
     public override init() {
         super.init()
