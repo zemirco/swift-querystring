@@ -46,18 +46,6 @@ open class TestOptional: QueryString {
 
 class swift_querystringTests: XCTestCase {
 
-    func testExample() {
-        // This is an example of a functional test case.
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
-        XCTAssertEqual("awesome", "Hello, World!")
-    }
-
-    static var allTests : [(String, (swift_querystringTests) -> () throws -> Void)] {
-        return [
-            ("testExample", testExample),
-        ]
-    }
-    
     func testString() {
         let test = TestString()
         XCTAssertEqual(test.encode(), "beep=\"bopp\"")
