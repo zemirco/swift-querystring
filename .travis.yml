@@ -1,2 +1,11 @@
 
-language: swift
+os: linux
+
+dist: trusty
+
+sudo: required
+
+language: generic
+
+script:
+  - swift test
