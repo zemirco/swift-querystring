@@ -1,9 +1,6 @@
 
-import UIKit
 import XCTest
-import swift_querystring
-
-
+@testable import swift_querystring
 
 open class TestString: QueryString {
     open var beep = "bopp"
@@ -48,16 +45,6 @@ open class TestOptional: QueryString {
 }
 
 class swift_querystringTests: XCTestCase {
-    
-    override func setUp() {
-        super.setUp()
-        // Put setup code here. This method is called before the invocation of each test method in the class.
-    }
-    
-    override func tearDown() {
-        // Put teardown code here. This method is called after the invocation of each test method in the class.
-        super.tearDown()
-    }
     
     func testString() {
         let test = TestString()

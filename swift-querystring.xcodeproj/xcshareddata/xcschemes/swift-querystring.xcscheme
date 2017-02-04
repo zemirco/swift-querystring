@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Scheme
-   LastUpgradeVersion = "0700"
+   LastUpgradeVersion = "9999"
    version = "1.3">
    <BuildAction
       parallelizeBuildables = "YES"
@@ -14,23 +14,9 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "3BA3A69B1B37E21B005591D1"
-               BuildableName = "swift-querystring.app"
+               BlueprintIdentifier = "OBJ_16"
+               BuildableName = "swift_querystring.framework"
                BlueprintName = "swift-querystring"
-               ReferencedContainer = "container:swift-querystring.xcodeproj">
-            </BuildableReference>
-         </BuildActionEntry>
-         <BuildActionEntry
-            buildForTesting = "YES"
-            buildForRunning = "YES"
-            buildForProfiling = "NO"
-            buildForArchiving = "NO"
-            buildForAnalyzing = "YES">
-            <BuildableReference
-               BuildableIdentifier = "primary"
-               BlueprintIdentifier = "3BA3A6B01B37E21B005591D1"
-               BuildableName = "swift-querystringTests.xctest"
-               BlueprintName = "swift-querystringTests"
                ReferencedContainer = "container:swift-querystring.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
@@ -40,29 +26,19 @@
       buildConfiguration = "Debug"
       selectedDebuggerIdentifier = "Xcode.DebuggerFoundation.Debugger.LLDB"
       selectedLauncherIdentifier = "Xcode.DebuggerFoundation.Launcher.LLDB"
-      shouldUseLaunchSchemeArgsEnv = "YES"
-      codeCoverageEnabled = "YES">
+      shouldUseLaunchSchemeArgsEnv = "YES">
       <Testables>
          <TestableReference
             skipped = "NO">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "3BA3A6B01B37E21B005591D1"
+               BlueprintIdentifier = "OBJ_23"
                BuildableName = "swift-querystringTests.xctest"
                BlueprintName = "swift-querystringTests"
                ReferencedContainer = "container:swift-querystring.xcodeproj">
             </BuildableReference>
          </TestableReference>
       </Testables>
-      <MacroExpansion>
-         <BuildableReference
-            BuildableIdentifier = "primary"
-            BlueprintIdentifier = "3BA3A69B1B37E21B005591D1"
-            BuildableName = "swift-querystring.app"
-            BlueprintName = "swift-querystring"
-            ReferencedContainer = "container:swift-querystring.xcodeproj">
-         </BuildableReference>
-      </MacroExpansion>
       <AdditionalOptions>
       </AdditionalOptions>
    </TestAction>
@@ -76,16 +52,15 @@
       debugDocumentVersioning = "YES"
       debugServiceExtension = "internal"
       allowLocationSimulation = "YES">
-      <BuildableProductRunnable
-         runnableDebuggingMode = "0">
+      <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "3BA3A69B1B37E21B005591D1"
-            BuildableName = "swift-querystring.app"
+            BlueprintIdentifier = "OBJ_16"
+            BuildableName = "swift_querystring.framework"
             BlueprintName = "swift-querystring"
             ReferencedContainer = "container:swift-querystring.xcodeproj">
          </BuildableReference>
-      </BuildableProductRunnable>
+      </MacroExpansion>
       <AdditionalOptions>
       </AdditionalOptions>
    </LaunchAction>
@@ -95,16 +70,6 @@
       savedToolIdentifier = ""
       useCustomWorkingDirectory = "NO"
       debugDocumentVersioning = "YES">
-      <BuildableProductRunnable
-         runnableDebuggingMode = "0">
-         <BuildableReference
-            BuildableIdentifier = "primary"
-            BlueprintIdentifier = "3BA3A69B1B37E21B005591D1"
-            BuildableName = "swift-querystring.app"
-            BlueprintName = "swift-querystring"
-            ReferencedContainer = "container:swift-querystring.xcodeproj">
-         </BuildableReference>
-      </BuildableProductRunnable>
    </ProfileAction>
    <AnalyzeAction
       buildConfiguration = "Debug">

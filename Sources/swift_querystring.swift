@@ -1,24 +1,6 @@
 
-import Foundation
-
-
-
-/**
- * Query string
- */
 open class QueryString {
     
-    
-    
-    public init() {
-        
-    }
-    
-    
-    
-    /**
-     * encode
-     */
     open func encode() -> String {
         
         let mirror = Mirror(reflecting: self)
@@ -29,15 +11,15 @@ open class QueryString {
             if type(of: (value)) is String.Type {
                 params.append(handleString(label!, value: value))
             }
-
+                
             else if type(of: (value)) is Bool.Type {
                 params.append("\(label!)=\(value)")
             }
-            
+                
             else if type(of: (value)) is Int.Type {
                 params.append(handleInt(label!, value: value))
             }
-            
+                
             else if type(of: (value)) is [String].Type {
                 if let arr = value as? [String] {
                     let vals = arr.map() {"\"\($0)\""}
@@ -45,7 +27,7 @@ open class QueryString {
                     params.append("\(label!)=[\(values)]")
                 }
             }
-            
+                
             else {
                 // handle optionals
                 let sub = Mirror(reflecting: value)
@@ -87,7 +69,6 @@ open class QueryString {
         
     }
     
-    // handle String
     fileprivate func handleString(_ key: String, value: Any) -> String {
         return "\(key)=\"\(value)\""
     }
