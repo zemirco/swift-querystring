@@ -1,6 +1,8 @@
 
 open class QueryString {
     
+    public init() {}
+    
     open func encode() -> String {
         
         let mirror = Mirror(reflecting: self)
